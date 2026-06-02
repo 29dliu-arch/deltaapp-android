@@ -1,21 +1,22 @@
 name: Upload Preview APK
 
-on: pull_request
+# 核心修改：只保留 workflow_dispatch，彻底关闭所有自动触发
+# 只有当你去 Actions 页面手动点击 "Run workflow" 时才会开始打包
+on:
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+  cancel-in-progress: true
 
 permissions: {}
 
 jobs:
   build:
     name: Upload Preview APK
-    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -79,17 +80,3 @@ jobs:
         with:
           name: app-preview.apk
           path: 'build/outputs/apk/gplay/debug/*.apk'
-
-      - name: Add artifact links to PR
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
-        env:
-          ARTIFACT_URL: ${{ steps.upload.outputs.artifact-url }}
-        with:
-          script: |
-            const url = process.env.ARTIFACT_URL;
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: `**To test the changes in this pull request, install this apk:**\n\n[📦 app-preview.apk](${url})`,
-            });
