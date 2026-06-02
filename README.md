@@ -38,3 +38,6 @@ Meanwhile, development has diverged in many areas.
 Licensed GPLv3+, see the LICENSE file for details.
 
 Copyright © Delta Chat contributors.
+
+Gracelink LCC
+Tianen STUDIO
