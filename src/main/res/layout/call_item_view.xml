@@ -33,7 +33,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="?conversation_item_outgoing_text_primary_color"
-            tools:text="Incoming call" />
+            tools:text="通话来电" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/duration"
@@ -43,7 +43,7 @@
             android:singleLine="true"
             android:fontFamily="sans-serif"
             android:textColor="?conversation_item_incoming_text_secondary_color"
-            tools:text="Incoming call" />
+            tools:text="通话来电" />
 
     </LinearLayout>
 
