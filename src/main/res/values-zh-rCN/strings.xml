@@ -252,7 +252,7 @@
     <string name="menu_new_contact">新建联系人</string>
     <string name="menu_new_classic_contact">手动添加联系人</string>
     <string name="new_classic_contact_explain">手动添加的联系人可用于向传统电子邮件发送文本，并且不能保证端到端加密。</string>
-    <string name="menu_new_chat">新建聊天</string>
+    <string name="menu_new_chat">新建私聊/群组</string>
     <string name="menu_new_group">新建群组</string>
     <!-- "Chat" is a verb here, "Message to" would also fit. the string might be used in the "New Chat" screen above the contact list -->
     <string name="chat_with">聊天…</string>
@@ -348,8 +348,8 @@
     <string name="jump_to_message">跳转到消息</string>
     <string name="replace_draft">替换草稿</string>
     <string name="title_share_location">与所有群组成员共享位置</string>
-    <string name="device_talk">设备消息</string>
-    <string name="device_talk_subtitle">本地生成的消息</string>
+    <string name="device_talk">恩信团队</string>
+    <string name="device_talk_subtitle">恩信官方给您的的消息</string>
     <string name="device_talk_explain">此聊天中的消息由您的设备生成，用于通知应用更新和使用过程中出现的问题。</string>
     <string name="device_talk_welcome_message2">开始连接！\n\n🙌 这是恩信生态中的 Delta Chat 版本客户端，通过二维码完成设备连接与添加。\n\n在两台设备的主屏幕上点击“二维码”。在一台设备上选择“扫描二维码”，然后将其对准另一台设备完成配对。\n\n🌍 如果双方不在同一个房间内，可以通过视频通话进行扫描，或分享“扫描二维码”中的邀请链接完成连接。\n\n然后：即可开始使用恩信生态即时通讯服务，与联系人进行消息交流与协作。\n\n本应用基于 Delta Chat 开源通信技术构建，由恩信团队进行生态集成与适配。与传统中心化即时通讯应用不同，通信过程不依赖单一中心服务器，实现去中心化的消息传递方式，更适用于组织、家庭、朋友与同事之间的沟通与协作场景。</string>
     <string name="edit_contact">编辑联系人</string>
